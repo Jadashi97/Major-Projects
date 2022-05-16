@@ -24,13 +24,24 @@ app.get("/", function(req, res){
   
 });
 
+//shows the about page and it's content is rendered there
+
+app.get("/about", function(req, res){
+
+  res.render("about", {aboutus:aboutContent})
+});
+
+app.get("/contact", (req, res)=>{
+  
+  res. render("contact", {mycontact: contactContent})
+
+});
 
 
+app.get("/compose", (req, res)=>{
 
-
-
-
-
+  res.render("compose")
+});
 
 
 
