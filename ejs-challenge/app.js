@@ -25,27 +25,36 @@ app.get("/", function(req, res){
 });
 
 //shows the about page and it's content is rendered there
-
 app.get("/about", function(req, res){
 
   res.render("about", {aboutus:aboutContent})
 });
 
+//this shows the contact page 
 app.get("/contact", (req, res)=>{
   
   res. render("contact", {mycontact: contactContent})
 
 });
 
-
+//this shows the compose page
 app.get("/compose", (req, res)=>{
 
   res.render("compose")
 });
 
+//create a post route to pass the infor that is publihed after hitting the compose button on the a new blog
+
+app.post('/compose' , (req , res)=>{
 
 
+  const yourDay = req.body.publish // this helps tap into the what user composes in the browser thru bodyparser
+  //  res.send('hello from simple server :)')
 
+});
+
+
+//this runs our server on the port 3000
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
