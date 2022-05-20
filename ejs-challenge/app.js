@@ -17,11 +17,9 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-
-
 // this sends our content to the home root route
-app.get("/", function(req, res){
 
+app.get("/", function(req, res){
   res.render("home", {homeContent:homeStartingContent, publishedPost:posts
   });
 });
@@ -66,7 +64,19 @@ app.post('/compose' , (req , res)=>{
   res.redirect("/")
 });
 
-
+//set a root route to handle the different pages with different blogs using expresss routing 
+app.get("/posts/:postName",(req, res)=>{
+  const titlleRequest = req.params.postName; //variable that stores my express root route
+  //using the forEach looping method to check whether the title of our blog post is same as our express, root route that we put in the browser.
+  posts.forEach(function(post){
+    const storedTitle = post.title // store the blog post title from (/compose)
+    if(titlleRequest === storedTitle){
+      console.log("Match found!!!");
+    }else{
+      console.log("Not found");
+    }
+  })
+})
 //this runs our server on the port 3000
 app.listen(3000, function() {
   console.log("Server started on port 3000");
