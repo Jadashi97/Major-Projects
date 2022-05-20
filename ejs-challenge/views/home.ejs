@@ -7,8 +7,12 @@
 
 <!-- this loops thru our array posts in app.js then taps into the object and logs the only the  post title using foreach method to loop thru an array -->
 
-<%publishedPost.forEach(function(posts){%>
-    <%console.log(posts.post)%>
+<%publishedPost.forEach(function(post){%>
+<!-- below use ejs tags to output the actual compose blog onto the home page -->
+    <h1> <%=post.title %> </h1>
+     <p> <%=post.content %> </p>
 <%})%>
 
 <%- include("partials/footer") -%>
+
+<!-- console.log(posts.post) -->

@@ -50,12 +50,12 @@ app.get("/compose", (req, res)=>{
 app.post('/compose' , (req , res)=>{
   // this helps tap into the what user composes in the browser thru bodyparser
   const theTitle = req.body.title;
-  const mainpost = req.body.maintext;
+  const mainpost = req.body.content;
  
   //create an object to store the infor passed by the user when they publish their written blog
   const postedData = {
-    post : theTitle,
-    publish : mainpost,
+    title: theTitle,
+    content : mainpost,
   };
   posts.push(postedData);
 
