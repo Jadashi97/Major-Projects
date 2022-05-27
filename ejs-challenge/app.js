@@ -75,9 +75,10 @@ app.get("/posts/:postName",(req, res)=>{
     if(titleRequest === storedTitle){
       res.render("post", {
         title:post.title,
-        content:post.content})
+        content:post.content
+      })
     }
-  })
+  });
 })
 //this runs our server on the port 3000
 app.listen(3000, function() {
