@@ -56,7 +56,7 @@ app.post('/compose' , (req , res)=>{
     title: theTitle,
     content : mainpost,
   };
-  posts.push(postedData);
+  posts.push(postedData); //this pushes the postedData into the empty array
 
   // //turning the postedData above into a json format
   // const jsonData = JSON.stringify(postedData)
@@ -73,6 +73,7 @@ app.get("/posts/:postName",(req, res)=>{
     //use the (_.) after using lodash in our app.js
     const storedTitle = _.lowerCase(post.title) // store the blog post title from (/compose)
     if(titleRequest === storedTitle){
+      //this opens a new page for the new blog post that should be  open in the browser!
       res.render("post", {
         title:post.title,
         content:post.content
