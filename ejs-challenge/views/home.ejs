@@ -3,7 +3,7 @@
 
 <h1> Home </h1>
 <!-- this only passes the stuff that is stored in our app.js content -->
-
+<p><%= homeContent %></p>
 <!-- this loops thru our array posts in app.js then taps into the object and logs the only the  post title using foreach method to loop thru an array -->
 
 <%publishedPost.forEach(function(post){%>
@@ -11,11 +11,12 @@
     <h1><%=post.title %></h1>
 
     <!-- the substring method trims down the content to 100 characters on the home page -->
-    <p><%=post.content.substring(0, 100) + " ..." %></p> 
-
+    <p>
+    <%=post.content.substring(0, 100) + " ..." %>
+    <!-- below sets up a link on the home page to click and read more of the blog -->
+    <a href="/posts/<%=post.title %>">Read more</a>
+    </p> 
+    
 <%})%>
 
 <%- include("partials/footer") -%>
-
-
-<!-- console.log(posts.post) -->
