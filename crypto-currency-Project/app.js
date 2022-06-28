@@ -21,12 +21,13 @@ app.get("/", (req, res) =>{
 
             const closingTradePrice = btc22.closingTrades[1].p //allows us to tap into the p value of closing BTC trades
 
-            console.log(closingTradePrice);
+            //this allows sending of multiple infor to the browser thru the res.write
+            
+            res.write(`<h1>The opening price of BTC is USD: ${openTradePrice}</h1>`)
+            res.write(`<h1>The closing price of BTC is USD: ${closingTradePrice}</h1>`)
+            res.end()
         });
-
     });
-
-    res.send("server is up and Running!!")
 });
 
 
