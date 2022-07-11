@@ -1,3 +1,5 @@
+
+//this is an array of contact objects 
 const contacts = [
 
     {
@@ -7,15 +9,17 @@ const contacts = [
         birthDate: "7/4/1997",
         userName: "jadashi97",
         email: "kumbayas@hotmail.com",
+        telNumber: "1234567878",
 
-        address:{
-            country : "South Sudan",
-            City: "juba",
-            state: "CE",
-            Street: "123 gudele rd",
-        }
-
-
+        // figure how to include this object in the contact list
+        address:
+            [{
+                country : "South Sudan",
+                City: "juba",
+                state: "CE",
+                Street: "123 gudele rd",
+            }
+            ]
     },
     {
         firstName: "Wani",
@@ -24,6 +28,7 @@ const contacts = [
         birthDate: "5/20/2000",
         userName: "wycli",
         email: "kumadss@hotmail.com",
+        telNumber: "1234567878",
 
         address:{
             country : "Uganda",
@@ -41,6 +46,7 @@ const contacts = [
         birthDate: "2/15/1998",
         userName: "bb1234",
         email: "yaaasaayas@hotmail.com",
+        telNumber: "1234567878",
 
         address:{
             country : "USA",
@@ -49,6 +55,7 @@ const contacts = [
             Street: "4000 franc rd",
         }
 
-
     },
 ];
+
+export default contacts; //this sends it to easily accessed and important by App.jsx
