@@ -1,4 +1,6 @@
 import React from "react";
+import Address from "./Address";
+import Detail from "./Detail";
 
 //this sets a dynamic way of passing the contact information using react properties(props)
 function Card(props){
@@ -13,9 +15,15 @@ function Card(props){
             <div className="bottom">
                 <p className="userName">{props.userName}</p>
                 <p className="email">{props.email}</p>
-                <p className="info">{props.telNumber}</p>
-                <p className="info">{props.birthDate}</p>
-                <p className="address">{props.address}</p>
+                <Detail // add this component detail to cut repetition
+                detailInfo = {props.birthDate}
+                />
+                <Detail
+                detailInfo= {props.telNumber}
+                />
+                <Address
+                addyInfor = {props.address}
+                />
             </div>
         </div>
     );

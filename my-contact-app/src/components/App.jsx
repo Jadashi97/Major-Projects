@@ -16,7 +16,7 @@ function App(){
            userName = {contacts[0].userName}
            email = {contacts[0].email}
            telNumber = {contacts[0].telNumber}
-        //    address = {contacts[0].address}
+           address = {contacts[0].address.country}
         />
 
         <Card

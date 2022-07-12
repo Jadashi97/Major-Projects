@@ -28,7 +28,7 @@ const contacts = [
         birthDate: "5/20/2000",
         userName: "wycli",
         email: "kumadss@hotmail.com",
-        telNumber: "1234567878",
+        telNumber: "123494570720",
 
         address:{
             country : "Uganda",
@@ -46,7 +46,7 @@ const contacts = [
         birthDate: "2/15/1998",
         userName: "bb1234",
         email: "yaaasaayas@hotmail.com",
-        telNumber: "1234567878",
+        telNumber: "1203475704373",
 
         address:{
             country : "USA",
@@ -58,4 +58,4 @@ const contacts = [
     },
 ];
 
-export default contacts; //this sends it to easily accessed and important by App.jsx
+export default contacts; //this sends it so it is easily accessed and imported by App.jsx
