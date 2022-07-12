@@ -3,6 +3,7 @@
 const contacts = [
 
     {
+        id :1,
         firstName: "Nyarji",
         lastName: "Jada",
         otherNames: "kose",
@@ -12,16 +13,15 @@ const contacts = [
         telNumber: "1234567878",
 
         // figure how to include this object in the contact list
-        address:
-            [{
-                country : "South Sudan",
+        address: {country : "South Sudan",
                 City: "juba",
                 state: "CE",
                 Street: "123 gudele rd",
-            }
-            ]
+        }
+
     },
     {
+        id : 2,
         firstName: "Wani",
         lastName: "Jada",
         otherNames: "Ronald",
@@ -40,6 +40,7 @@ const contacts = [
 
     },
     {
+        id: 3, 
         firstName: "Toni",
         lastName: "Roncales",
         otherNames: "Rose",
