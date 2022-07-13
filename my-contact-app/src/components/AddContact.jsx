@@ -9,7 +9,52 @@ function AddContact(props){
         <Link to="/">Back</Link>
         <form className="field" onsubmit = {props.onSubmit}>
             <div className="control">
+                <input
+                    type ="text"
+                    name = "fname"
+                    className="input"
+                    placeholder="First Name"
+                    value = {props.first}
+                    onchange = {props.onchange}
+                />
 
+                <input
+                    type ="text"
+                    name = "name"
+                    className="input"
+                    placeholder="Last Name"
+                    value = {props.first}
+                    onchange = {props.onchange}
+                />
+
+
+                <input
+                    type ="text"
+                    name = "name"
+                    className="input"
+                    placeholder="other names"
+                    value = {props.first}
+                    onchange = {props.onchange}
+                />
+
+
+                <input
+                    type ="tel"
+                    name = "phone"
+                    className="input"
+                    placeholder="Mobile"
+                    value = {props.phone}
+                    onchange = {props.onchange}
+                />
+
+                <input
+                    type ="tel"
+                    name = "phone"
+                    className="input"
+                    placeholder="Mobile"
+                    value = {props.phone}
+                    onchange = {props.onchange}
+                />
             </div>
         </form>
     </React.Fragment>

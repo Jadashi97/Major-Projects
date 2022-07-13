@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "react-router-dom"
-import AddButton from "./AddButton";
+import Link from "react-router-dom"; //npm package that contains bindings for using a React Router
 
 
 function Header(){
