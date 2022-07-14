@@ -1,13 +1,27 @@
 import React from "react";
-import Link from "react-router-dom"; //npm package that contains bindings for using a React Router
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import AddButton from "./AddButton";
 
 
-function Header(){
+function Header({onshowAddForm, searchString, setSearchString}){
     return (
-        <div>
-            <h1>Contact</h1>
-            <Link to="/add">Add Contact</Link>
-        </div>
+        <header>
+            <AddButton onclick={onshowAddForm}/>
+            <h1>Contacts </h1>
+            <label>
+                <div>
+                    <FontAwesomeIcon icon={faSearch} color="#757575" />  
+                </div>
+                {/* <input
+                    type="text"
+                    className=""
+                    placeholder="Search"
+                    value = {searchString}
+                    onChange = { e => setSearchString(e.target.value)}    
+                /> */}
+            </label>
+        </header>
     )
 }
 
