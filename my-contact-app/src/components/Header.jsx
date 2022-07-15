@@ -1,29 +1,15 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import AddButton from "./AddButton";
+import React from "react"; //this is the same as when you require it from the dependecies
 
-
-function Header({onshowAddForm, searchString, setSearchString}){
+function Header(){
     return (
-        <header>
-            <AddButton onclick={onshowAddForm}/>
-            <h1>Contacts </h1>
-            <label>
-                <div>
-                    <FontAwesomeIcon icon={faSearch} color="#757575" />  
-                </div>
-                {/* <input
-                    type="text"
-                    className=""
-                    placeholder="Search"
-                    value = {searchString}
-                    onChange = { e => setSearchString(e.target.value)}    
-                /> */}
-            </label>
-        </header>
+        <div className="header">
+            <header>
+                <h1>My Contact App</h1>
+            </header>
+        </div>
     )
 }
+
 
 export default Header;
 
