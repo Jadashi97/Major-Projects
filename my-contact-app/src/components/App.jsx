@@ -4,7 +4,7 @@ import Header from "./Header";
 import contactsData from "../contacts";
 // import { BrowserRouter } from "react-router-dom";
 // import { BrowserRouter as Router, Route } from "react-router-dom";
-// import AddContact from "./AddContact";
+import AddContact from "./AddContact";
 
 //this uses the card component created in card.jsx to dynamically create more contacts using the objects from contacts.js
 
@@ -38,19 +38,35 @@ import contactsData from "../contacts";
 //     );
 // }
 
-function newContacts = (newContact) =>{
+//this is a tempelate to cut down on repetition
+const newContacts = (newContact) =>{
   return (
-   
+    <div>
+    <AddContact
+      key = {newContact.id}
+      firstName = {newContact.firstName}
+      lastName = {newContact.lastName}
+      otherNames=  {newContact.otherNames}
+      birthDate =  {newContact.birthDate}
+      userName =  {newContact.userName}
+      email = {newContact.email}
+      telNumber = {newContact.telNumber}
     />
+
+    </div>    
   )
 }
 
+console.log(newContacts);
 
 
 function App(){
   return (
     <div>
     <Header/>
+    <hr />
+    {contactsData.map(newContacts)}
+    <br />
     </div>
 
   )
