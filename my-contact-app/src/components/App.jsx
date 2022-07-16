@@ -5,7 +5,7 @@ import Login from "./Login"
 import AddContact from "./AddContact";
 import AddButton from "./AddButton";
 
-var isLoggedIn = false;
+var isLoggedIn = true;
 
 
 //this is a tempelate to cut down on repetition
@@ -21,6 +21,7 @@ const newContacts = (newContact) =>{
       userName =  {newContact.userName}
       email = {newContact.email}
       telNumber = {newContact.telNumber}
+      address = {newContact.Address}
     />
     </div>    
   )
@@ -29,12 +30,11 @@ const newContacts = (newContact) =>{
 function App(){
   return (
     <div className="container">
-    <AddButton/>
     <Header/>
-    <hr />
+    <AddButton/>
+    <br />
     {contactsData.map(newContacts)}
     {isLoggedIn === true? <h1>Voila, Welcome!!</h1>: <Login/>}
-    <br />
     </div>
 
   )

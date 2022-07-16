@@ -3,19 +3,15 @@ import React from "react";
  function AddContact(props){
     return(
     <div>
-        <h1>{props.firstname}</h1>
+        <h4>Name: {props.firstName} {props.otherNames}, {props.lastName}</h4>
         <br></br>
-        <p>{props.lastName}</p>
+        <p>Birth Date: {props.birthDate}</p>
         <br></br>
-        <p>{props.otherNames}</p>
+        <p>username: {props.userName}</p>
         <br></br>
-        <p>{props.birthDate}</p>
+        <p>Email: {props.email}</p>
         <br></br>
-        <p>{props.userName}</p>
-        <br></br>
-        <p>{props.email}</p>
-        <br></br>
-        <p>{props.telNumber}</p>
+        <p> Phone: {props.telNumber}</p>
         <br />
         <hr />
     </div>)

@@ -4,7 +4,7 @@ function Header(){
     return (
         <div className="header">
             <header>
-                <h1>My Contact App</h1>
+                <h1>My Family App</h1>
             </header>
         </div>
     )

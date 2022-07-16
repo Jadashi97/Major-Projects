@@ -2,10 +2,10 @@ import React from "react";
 
 function CreateNewContact(){
     return(
-        <form>
+        <form type = "submit">
             <label>
-                <input> {Enter your name:}
-                    {type = "text"}
+                <input>
+    
                 </input>
             </label>
         </form>

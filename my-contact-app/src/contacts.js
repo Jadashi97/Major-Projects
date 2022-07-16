@@ -7,7 +7,7 @@ const contactsData = [
         firstName: "Nyarji",
         lastName: "Jada",
         otherNames: "kose",
-        birthDate: "7/4/1997",
+        birthDate: "7/4/1597",
         userName: "jadashi97",
         email: "kumbayas@hotmail.com",
         telNumber: "1234567878",
@@ -25,7 +25,7 @@ const contactsData = [
         firstName: "Wani",
         lastName: "Jada",
         otherNames: "Ronald",
-        birthDate: "5/20/2000",
+        birthDate: "9/92/1700",
         userName: "wycli",
         email: "kumadss@hotmail.com",
         telNumber: "123494570720",
@@ -41,10 +41,10 @@ const contactsData = [
     },
     {
         id: 3, 
-        firstName: "Toni",
-        lastName: "Roncales",
-        otherNames: "Rose",
-        birthDate: "2/15/1998",
+        firstName: "Lemi",
+        lastName: "Jada",
+        otherNames: "Stephen",
+        birthDate: "10/27/1807",
         userName: "bb1234",
         email: "yaaasaayas@hotmail.com",
         telNumber: "1203475704373",
@@ -57,6 +57,24 @@ const contactsData = [
         }
 
     },
+    {
+        id: 3, 
+        firstName: "Toni",
+        lastName: "Jada",
+        otherNames: "Jibbi",
+        birthDate: "2/15/1998",
+        userName: "bb1234",
+        email: "yaaasaayas@hotmail.com",
+        telNumber: "1203475704373",
+
+        address:{
+            country : "USA",
+            City: "Mclean",
+            state: "MN",
+            Street: "4000 franc rd",
+        }
+
+    }
 ];
 
 export default contactsData; //this sends it so it is easily accessed and imported by App.jsx
