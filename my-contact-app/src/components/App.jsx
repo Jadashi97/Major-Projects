@@ -1,18 +1,17 @@
 import React from "react";
 import Header from "./Header";
-// import {useState} from "react";
 import contactsData from "../contacts";
-// import { BrowserRouter } from "react-router-dom";
-// import { BrowserRouter as Router, Route } from "react-router-dom";
+import Login from "./Login"
 import AddContact from "./AddContact";
+import AddButton from "./AddButton";
 
-var isLoggedIn = true;
+var isLoggedIn = false;
 
 
 //this is a tempelate to cut down on repetition
 const newContacts = (newContact) =>{
   return (
-    <div>
+    <div className="header">
     <AddContact
       key = {newContact.id}
       firstName = {newContact.firstName}
@@ -23,20 +22,18 @@ const newContacts = (newContact) =>{
       email = {newContact.email}
       telNumber = {newContact.telNumber}
     />
-
     </div>    
   )
 }
 
-console.log(newContacts);
-
-
 function App(){
   return (
-    <div>
+    <div className="container">
+    <AddButton/>
     <Header/>
     <hr />
     {contactsData.map(newContacts)}
+    {isLoggedIn === true? <h1>Voila, Welcome!!</h1>: <Login/>}
     <br />
     </div>
 
