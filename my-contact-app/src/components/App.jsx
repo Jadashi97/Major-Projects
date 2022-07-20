@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "./Header";
 import contactsData from "../contacts";
-import Login from "./Login"
 import AddContact from "./AddContact";
 import AddButton from "./AddButton";
+import Form from "./Form"
 
-var isLoggedIn = true;
+var userIsRegistered = true;
 
 
 //this is a tempelate to cut down on repetition
@@ -34,7 +34,8 @@ function App(){
     <AddButton/>
     <br />
     {contactsData.map(newContacts)}
-    {isLoggedIn === true? <h1>Voila, Welcome!!</h1>: <Login/>}
+    <Form isRegistered={userIsRegistered} />
+
     </div>
 
   )
