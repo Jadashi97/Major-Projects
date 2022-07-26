@@ -1,5 +1,11 @@
+
+body {
+    font-family: "Montserrat";
+    text-align: center;
+}
+
 .top-container{
-    padding: 100px;
+    padding: 70px;
     background-color: #c3d9d9;
     text-align: center;
 }
@@ -9,3 +15,8 @@
     
 }
 
+/* Containers */
+
+.container-fluid{
+    padding: 5% 10%;
+  }
