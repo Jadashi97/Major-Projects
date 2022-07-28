@@ -1,22 +1,28 @@
 
 body {
     font-family: "Montserrat";
-    text-align: center;
+    /* display: flex; */
 }
 
 .top-container{
-    padding: 70px;
+    padding: 100px;
     background-color: #c3d9d9;
-    text-align: center;
 }
 
 .afri{
-    padding-top: 50px;
+    display: block;
+    width: 40%;
+    height: auto;
     
 }
 
 /* Containers */
 
 .container-fluid{
-    padding: 5% 10%;
-  }
+    padding: 1rem;
+}
+
+
+.search{
+    padding-left: 40px;
+}
