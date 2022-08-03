@@ -1,10 +1,14 @@
 import React from "react";
-import logo from "./logo_ss2.jpg"
-
 function Header(){
     return(
         <div>
-            <img src={logo} alt="Logo" />;
+            <div class="topnav">
+                <a class="active" href="#home">Home</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+            {/* <img src={logo} alt="Logo" />; */}
         </div>
     )
 }
