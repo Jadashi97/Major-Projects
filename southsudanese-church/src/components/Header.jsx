@@ -3,19 +3,17 @@ function Header(){
     return(
         <div>
             <div>
-                <img alt="myimage" src="/logo_ss1/jpg" width={20} height={20}></img>
             </div>
             <div class="topnav">
-                <a class="active" href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#news">New Members</a>
-                <a href="#contact">Contact us</a>
-                <a href="#news">Sermons and Resources</a>
-                <a href="#news">Ministries</a>
-                <a href="#news"><button>Giving</button></a>
-
+                {/* <a class="active" href="#home">Home</a> */}
+                <img href="#home" class="active" alt="myimage" src="/sspic4.png" width={170} height={120}></img>
+                <a href="#news"><button>GIVING</button></a>
+                <a href="#news">NEW MEMBERS</a>
+                <a href="#contact">CONTACT US</a>
+                <a href="#news">SERMONS</a>
+                <a href="#news">RESOURCES</a>
+                <a href="#about">ABOUT</a>
             </div>
-            {/* <img src={logo} alt="Logo" />; */}
         </div>
     )
 }
