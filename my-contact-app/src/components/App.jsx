@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import contactsData from "../contacts";
+import CreateNewContact from "./CreateContact";
 import AddContact from "./AddContact";
 import AddButton from "./AddButton";
 import Form from "./Form"
@@ -31,6 +32,7 @@ function App(){
   return (
     <div className="container">
     <Header/>
+    <CreateNewContact/>
     <AddButton/>
     <br />
     {contactsData.map(newContacts)}

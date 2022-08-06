@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
  function AddContact(props){
     return(
     <div>
+
         <h4>Name: {props.firstName} {props.otherNames}, {props.lastName}</h4>
         <br></br>
         <p>Birth Date: {props.birthDate}</p>
