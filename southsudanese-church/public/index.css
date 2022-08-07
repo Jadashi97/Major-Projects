@@ -15,7 +15,7 @@ body {
   overflow: hidden;
   justify-content: center;
   background-color: rgb(203, 100, 100);
-  padding: 20px;
+  padding: 10px;
 }
 
 .topnav a {
@@ -69,4 +69,14 @@ footer {
 
 footer p {
   color: #ccc;
+}
+
+.active{
+  border-radius: 20%;
+  border-width: 10px;
+}
+
+.picslides{
+  float: left;
+  width: 50%;
 }
