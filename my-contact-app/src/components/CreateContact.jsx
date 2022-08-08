@@ -4,24 +4,22 @@ import React, { useState } from "react";
 
 function CreateNewContact(props){
     const [contact, setContact] = useState({
-        firstName: "",
-        lastName: "",
-        userName: "",
-        birthDate: "",
-        number: "",
-
-
+        name: " ",
+        birthDate: " ",
+        userName: " ",
+        email: " ",
+        phone: " ",
     });
 
     //handling change
     function HandleChange(event){
-        const {person, value} = event.target; //destructing the contact of the person
+        const {name, value} = event.target; //destructing the contact of the person
 
         //setting up a function with a spread operator
         setContact((prevContact) =>{
             return{
                 ...prevContact,
-                [person]: value
+                [name]: value
             };
         })
     }
@@ -32,11 +30,11 @@ function CreateNewContact(props){
         props.onAdd(contact); //this will pass the new contact thru the props to App.jsx
 
         setContact({
-            firstName: "",
-            lastName: "",
-            userName: "",
+            name: "",
             birthDate: "",
-            number: "", 
+            userName: "",
+            email: "",
+            phone: "", 
         })
 
         event.preventDefault();
@@ -46,10 +44,10 @@ function CreateNewContact(props){
         <div>
             <form  className="create-note">
 
-                <input name="firstName" onChange={HandleChange} value={contact.firstName} placeholder="First Name" />
-			    <input name="lastName" onChange={HandleChange} value={contact.lastName} placeholder="Last Name" />
+                <input name="name" onChange={HandleChange} value={contact.name} placeholder="First Name" />
                 <input name="userName" onChange={HandleChange} value={contact.userName} placeholder="userName" />
                 <input name="birthDate" onChange={HandleChange} value={contact.birthDate} placeholder="BirthDate"/>
+			    <input name="email" onChange={HandleChange} value={contact.email} placeholder="email" />
                 <input name="phone" onChange={HandleChange} value={contact.phone} placeholder="phone"/>
                 <button onClick={submitContact}>Add</button>
             </form>

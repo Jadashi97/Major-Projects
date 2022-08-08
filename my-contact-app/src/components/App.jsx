@@ -2,30 +2,10 @@ import React, { useState } from "react";
 import Header from "./Header";
 import contacts from "../contacts"
 import CreateNewContact from "./CreateContact";
-import AddContact from "./AddContact";
+import Contact from "./Contact";
 // import Form from "./Form"
 
 // var userIsRegistered = true;
-
-
-//this is a tempelate to cut down on repetition
-const newContacts = (newContact) =>{
-  return (
-    <div className="header">
-    <AddContact
-      key = {newContact.id}
-      firstName = {newContact.firstName}
-      lastName = {newContact.lastName}
-      otherNames=  {newContact.otherNames}
-      birthDate =  {newContact.birthDate}
-      userName =  {newContact.userName}
-      email = {newContact.email}
-      telNumber = {newContact.telNumber}
-      address = {newContact.Address}
-    />
-    </div>    
-  )
-}
 
 function App(){
       const [contacts, setContacts] = useState([]) //destructure and set a state
@@ -45,7 +25,19 @@ function App(){
         <Header/>
         <CreateNewContact onAdd={addContact}/>
         <br />
-        {contacts.map(newContacts)}
+        {contacts.map((contactItem, index)=> {
+            return (
+              <Contact
+                Key= {index}
+                id= {index}
+                name = {contactItem.name}
+                birthDate =  {contactItem.birthDate}
+                userName =  {contactItem.userName}
+                email = {contactItem.email}
+                phone = {contactItem.phone}          
+              />
+            );
+        })}
         {/* <Form isRegistered={userIsRegistered} /> */}
 
         </div>
