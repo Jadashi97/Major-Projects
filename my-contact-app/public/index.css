@@ -14,7 +14,7 @@
   header {
     background-color: #f5ba13;
     margin: auto -16px;
-    padding: 16px 32px;
+    /* padding: 16px 32px; */
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   }
   
@@ -37,8 +37,8 @@
   }
 
   .container {
-    margin: 10% auto;
-    padding: 80px 0;
+    /* margin: 10% auto; */
+    /* padding: 80px 0; */
     text-align: center;
   }
 

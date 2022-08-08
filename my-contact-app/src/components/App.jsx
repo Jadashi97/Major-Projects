@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "./Header";
-import contactsData from "../contacts";
+import contacts from "../contacts"
 import CreateNewContact from "./CreateContact";
 import AddContact from "./AddContact";
 // import Form from "./Form"
@@ -45,7 +45,7 @@ function App(){
         <Header/>
         <CreateNewContact onAdd={addContact}/>
         <br />
-        {contactsData.map(newContacts)}
+        {contacts.map(newContacts)}
         {/* <Form isRegistered={userIsRegistered} /> */}
 
         </div>

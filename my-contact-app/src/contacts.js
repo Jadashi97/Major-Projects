@@ -1,6 +1,6 @@
 
 //this is an array of contact objects 
-const contactsData = [
+const contacts = [
 
     {
         id :1,
@@ -77,4 +77,4 @@ const contactsData = [
     }
 ];
 
-export default contactsData; //this sends it so it is easily accessed and imported by App.jsx
+export default contacts; //this sends it so it is easily accessed and imported by App.jsx
