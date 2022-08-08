@@ -1,43 +1,80 @@
-// import React from "react";
 
+// import React, { useState } from 'react';
+// import Carousel from 'react-responsive-carousel/Carousel';
 
-// function BodyContent(){
-//     return(
-//         <div className="picslides">
-//             <img alt="" src={require("../images/souths.jpg")}/>
-//         </div>    
-//     )
+// function ControlledCarousel() {
+//   const [index, setIndex] = useState(0);
+
+//   const handleSelect = (selectedIndex, e) => {
+//     setIndex(selectedIndex);
+//   };
+
+//   return (
+//     <Carousel activeIndex={index} onSelect={handleSelect}>
+//       <Carousel.Item>
+//         <img
+//           className="picslides"
+//           src={require("../images/ss6.jpg")}
+//           alt="First slide"
+//         />
+        // <img
+        //   className="d-block w-100"
+        //   src={require("../images/ss5.jpg")}
+        //   alt="Second slide"
+        // />
+//       </Carousel.Item>
+//       <Carousel.Item>
+//         {/* <img
+//           className="d-block w-100"
+//           src={require("../images/ss5.jpg")}
+//           alt="Second slide"
+//         /> */}
+//       </Carousel.Item>
+//       <Carousel.Item>
+        // <img
+        //   className="d-block w-100"
+        //   src={require("../images/ss2.jpg")}
+        //   alt="Third slide"
+        // />
+//       </Carousel.Item>
+//     </Carousel>
+//   );
 // }
 
-// export default BodyContent;
+// export default ControlledCarousel;
 
-import Carousel from 'react-bootstrap/Carousel';
-
-function CarouselFadeExample() {
-  return (
-    <Carousel fade>
-      <Carousel.Item>
-        <img  className={("picslides")} alt="" src={require("../images/souths.jpg")}/>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img  className={("picslides")} alt="" src={require("../images/souths.jpg")}/>
-      </Carousel.Item>
-      <Carousel.Item>
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+const images = [
+        <img
+          className="picslides"
+          src={require("../images/ss6.jpg")}
+          alt="First slide"
+        />,
+        
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
+          src={require("../images/ss5.jpg")}
+          alt="Second slide"
+        />,
+        <img
+          className="d-block w-100"
+          src={require("../images/ss2.jpg")}
           alt="Third slide"
-        />
+        />, 
+];  
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+function ImageSlide() {
+  return (
+    <div className="box">
+      <Carousel useKeyboardArrows={true}>
+        {images.map((URL, index) => (
+          <div className="slide">
+            <img alt="sample_file" src={URL} key={index} />
+          </div>
+        ))}
+      </Carousel>
+    </div>
   );
 }
-
-export default CarouselFadeExample;
+export default ImageSlide;

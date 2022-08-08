@@ -1,26 +1,26 @@
-* {
+/* * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
   background: rgb(237, 233, 233);
-  margin: 0;
-  padding: 0 16px;
+  margin: 0.2rem;
+  padding:2rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .topnav {
   overflow: hidden;
   justify-content: center;
-  background-color: rgb(203, 100, 100);
+  background-color: rgb(247, 138, 138);
   padding: 10px;
 }
 
 .topnav a {
   float: right;
-  color: #050404;
+  color: rgb(8, 0, 0);
   text-align: center;
   padding: 16px 16px;
   text-decoration: none;
@@ -77,6 +77,6 @@ footer p {
 }
 
 .picslides{
-  float: left;
-  width: 50%;
+  padding: 4rem;
+  object-fit: contain;
 }
