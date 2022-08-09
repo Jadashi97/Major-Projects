@@ -19,6 +19,13 @@ function App(){
       }
 
       //add a delete button to the each contact
+      function deleteContact(id){
+        setContacts(prevContacts =>{
+          return prevContacts.filter((contactItem, index)  => {
+            return index !== id;
+          })
+        })
+      }
 
       return (
         <div className="container">
@@ -34,7 +41,8 @@ function App(){
                 birthDate =  {contactItem.birthDate}
                 userName =  {contactItem.userName}
                 email = {contactItem.email}
-                phone = {contactItem.phone}          
+                phone = {contactItem.phone}
+                onDelete={deleteContact}          
               />
             );
         })}

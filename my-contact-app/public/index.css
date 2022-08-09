@@ -12,7 +12,7 @@
   }
   
   header {
-    background-color: #f5ba13;
+    background-color: #44f513;
     margin: auto -16px;
     /* padding: 16px 32px; */
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -69,7 +69,8 @@
     box-shadow: 0 1px 5px rgb(138, 137, 137);
   }
   
-  form.create-note input{
+  form.create-note input,
+  form.create-note textarea {
     width: 100%;
     border: none;
     padding: 4px;
