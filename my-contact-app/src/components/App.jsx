@@ -27,6 +27,12 @@ function App(){
         })
       }
 
+      //add edit btn to update the contact
+
+      function editContact(){
+        console.log("update me")
+      }
+
       return (
         <div className="container">
         <Header/>
