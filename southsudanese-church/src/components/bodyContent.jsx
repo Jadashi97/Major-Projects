@@ -1,19 +1,19 @@
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import SliderData from "./sliderData";
+import items from "./imageData";
 
-function ImageSlide() {
+function BodyContent() {
   return (
-    <div className="box">
+    <div>
       <Carousel useKeyboardArrows={true}>
-        {SliderData.map((sliderData, index) => (
+        {items.map(({image, index}) => (
           <div className="slide">
-            <img alt="pic" src={SliderData.image} key={index} />
+            <img src={image.default} key ={index} alt={"pic holder"}/>
           </div>
         ))}
       </Carousel>
     </div>
   );
 }
-export default ImageSlide;
+export default BodyContent;
