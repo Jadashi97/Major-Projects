@@ -8,8 +8,8 @@ function BodyContent() {
     <div>
       <Carousel useKeyboardArrows={true}>
         {items.map(({image, index}) => (
-          <div className="slide">
-            <img src={image.default} key ={index} alt={"pic holder"}/>
+          <div className="carousel">
+            <img src={image.default} key ={index} alt={"pics"}/>
           </div>
         ))}
       </Carousel>

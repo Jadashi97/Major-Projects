@@ -2,7 +2,7 @@
 import Header from './Header';
 // import Footer from './Footer';
 import BodyContent from './bodyContent';
-// import ImageSlide from "./bodyContent"
+import Events from './Events';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <Header/>
       <header className="App-header">
       <BodyContent/>
+      <Events/>
       </header>
       {/* <Footer/> */}
     </div>
