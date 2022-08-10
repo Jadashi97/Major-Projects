@@ -3,11 +3,11 @@
 const items = [
     {
         id:1,
-        image: require("../images/ss1.jpg")
+        image:("./images/ss1.jpg")
     },
     {
         id:2,
-        image: require("../images/ss2.jpg")
+        image:("./images/ss2.jpg")
 
     },
     {

@@ -1,18 +1,22 @@
-
+import React, {useState} from 'react';
 import Header from './Header';
 // import Footer from './Footer';
 import BodyContent from './bodyContent';
 import Events from './Events';
+import { Breakpoint, BreakpointProvider } from "react-socks";
 
 function App() {
+  const [width, setWindowWidth] = useState(0);
+
   return (
     <div className="App">
-      <Header/>
-      <header className="App-header">
-      <BodyContent/>
-      <Events/>
-      </header>
-      {/* <Footer/> */}
+      <BreakpointProvider>
+      <Breakpoint></Breakpoint>
+        <Header className="App-header"/>
+        <BodyContent/>
+        <Events/>
+      {/* <Footer/> */} 
+      </BreakpointProvider>
     </div>
   );
 }
