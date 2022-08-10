@@ -29,8 +29,21 @@ function App(){
 
       //add edit btn to update the contact
 
-      function editContact(){
+      function editContact(id, newContact){
         console.log("update me")
+        const editContactList = contacts.map((contacts)=>{
+          
+          // check if the contact is same ID as the edited task
+          if(id === contacts.id){
+
+              return {...contacts, name: newContact}
+          }
+          return contacts;
+
+        });
+        
+        setContacts(editContactList)
+
       }
 
       return (
@@ -48,7 +61,8 @@ function App(){
                 userName =  {contactItem.userName}
                 email = {contactItem.email}
                 phone = {contactItem.phone}
-                onDelete={deleteContact}          
+                onDelete={deleteContact}
+                onEdit={editContact}       
               />
             );
         })}
