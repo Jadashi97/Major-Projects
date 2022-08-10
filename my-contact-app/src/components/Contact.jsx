@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 
 
 function Contact(props){
+    const [newContact, setNewContact] = useState(false); ///USE THIS TO FIX THE EDIT ISSUE HAPPENING
+
 
     //this passess the onDelete btn to the jsx when invoked in app.jsx
 
@@ -11,10 +13,14 @@ function Contact(props){
         props.onDelete(props.id)
     }
 
+    function handleChange(event){
+        setNewContact(event.target.value)
+
+    }
     function handleEdit(event){
         event.preventDefault();
-        console.log("edit me!!");
-        // props.onEdit(props.id)
+        props.onEdit(props.id, newContact);
+        setNewContact(" ");
     }
 
     return(
@@ -27,7 +33,7 @@ function Contact(props){
                 <p>Email: {props.email}</p>
                 <p> Phone: {props.phone}</p>
                 <button onClick={handleClick}>Delete</button>
-                <button onClick={handleEdit}>Edit</button>
+                <button onChange={handleChange} onClick={handleEdit}>Edit</button>
                 <br/>
             </form>
         </div>
