@@ -96,3 +96,13 @@ footer p {
   height: 700px;
   background-color: rgb(255, 254, 254);
 }
+
+.church-projects{
+  display: flex;
+  padding: 1rem;
+  background-color: rgb(226, 161, 161);
+}
+
+.space-pics{
+  padding: 2rem;
+}
