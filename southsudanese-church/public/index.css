@@ -13,6 +13,7 @@ body {
 
 .topnav {
   overflow: hidden;
+  display: flexbox;
   justify-content: center;
   background-color: rgb(247, 138, 138);
   padding: 10px;
@@ -117,4 +118,8 @@ footer p {
 .img{
   max-width: 100%;
   height: auto;
+}
+
+h2{
+  text-align: center;
 }

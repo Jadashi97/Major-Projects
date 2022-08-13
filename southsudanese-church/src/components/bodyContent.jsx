@@ -6,6 +6,7 @@ import items from "./imageData"
 function BodyContent() {
   return (
     <div>
+      <h2>Let us come together to share and Worship with the Lord</h2>
       <Carousel useKeyboardArrows={true}>
         {items.map((image, index) => (
           <div >

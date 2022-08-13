@@ -14,11 +14,13 @@ function Header(){
                 <img href="#home" className="header-img" alt="myimage" src="/sspic4.png" width={170} height={120}></img>
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                 <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
+                <Nav className="topnav">
+                    <Nav.Link href="#home">HOME</Nav.Link>
+                    <Nav.Link href="#link">ABOUT US</Nav.Link>
+                    <Nav.Link href="#link">SERMON</Nav.Link>
+                    <Nav.Link href="#link">EVENTS</Nav.Link>
+                    <Nav.Link href="#link"><button>GIVING</button></Nav.Link>
+
                     {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
