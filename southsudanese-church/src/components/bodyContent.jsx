@@ -1,9 +1,9 @@
 
 import React from "react";
-// import { Carousel } from "react-responsive-carousel";
+import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import items from "./imageData";
-import { Slide } from "react-slideshow-image";
+import items from "./imageData";
+// import { Slide } from "react-slideshow-image";
 
 
 // const items = [
@@ -21,23 +21,23 @@ import { Slide } from "react-slideshow-image";
 //   "images/ss11.jpg"
 // ]
 
-const properties = {
-  duration: 5000,
-  transitionDuration: 500,
-  infinite: true,
-  indicators: true,
-  arrows: true,
-  onChange: (oldIndex, newIndex) => {
-    console.log(`slide transition from ${oldIndex} to ${newIndex}`);
-  }
-}
+// const properties = {
+//   duration: 5000,
+//   transitionDuration: 500,
+//   infinite: true,
+//   indicators: true,
+//   arrows: true,
+//   onChange: (oldIndex, newIndex) => {
+//     console.log(`slide transition from ${oldIndex} to ${newIndex}`);
+//   }
+// }
 
-const url = "src/images";
+// const url = "src/images";
 
 function BodyContent() {
   return (
     <div>
-      <h2>Let us come together to share and Worship with the Lord</h2>
+      {/* <h2>Let us come together to share and Worship with the Lord</h2>
       <div className="slide-container">
         <Slide {...properties}>
           <div className="each-slide">
@@ -56,17 +56,17 @@ function BodyContent() {
             </div>
           </div>
         </Slide>
-      </div>
+      </div> */}
 
 
 
-    {/* <Carousel useKeyboardArrows={true}>
+    <Carousel useKeyboardArrows={true}>
         {items.map((image, index) => (
           <div >
             <img src={image} key ={index} alt={"pics"}/>
           </div>
         ))}
-      </Carousel> */}
+      </Carousel>
     </div>
   );
 }
