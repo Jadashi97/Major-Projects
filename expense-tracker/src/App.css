@@ -23,6 +23,13 @@ header h1{
   font-size: 40px;
 }
 
+.alert{
+  width: 250px;
+  margin-top: 2rem;
+  margin-left: 15%;
+  box-shadow: 0 0 10px 0 rgba(246, 3, 3, 0.3);
+}
+
 .budget{
-  box-shadow: 2em;
+  display:flex;
 }
