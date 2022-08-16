@@ -1,31 +1,24 @@
 import React from 'react';
 import Header from './Header';
 // import Footer from './Footer';
-import { BrowserRouter, Switch, Routes,Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import BodyContent from './bodyContent';
 import Events from './Events';
 import Location from './Location';
-// import { Breakpoint, BreakpointProvider } from "react-socks";
 
 function App() {
 
   return (
-    <div className="App">
-    <BrowserRouter>
+    <BrowserRouter className="App">
       <Routes>
-        <Route>
-          <switch>
-            <Header className="App-header"/>
-            <BodyContent/>
-            <Events/>
-            <Location/> 
-          </switch>
-        </Route>
-          
+          <Route path="/" element={<Header className="App-header"/>}>
+              <Route path="/" element={<BodyContent/>}/>
+              <Route path="/" element={<Events/>}/>
+              <Route path="/" element={<Location/>}/> 
+          </Route>
         </Routes>
-      </BrowserRouter>
-    </div>
-  );
+    </BrowserRouter>
+    );    
 }
 
 export default App;
