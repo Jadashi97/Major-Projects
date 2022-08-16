@@ -22,21 +22,6 @@ function Header(){
             </Container>
         </Navbar>
 
-        // <Navbar bg="light" expand="lg">
-        //     <Container className=''>
-        //         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-        //         <Navbar.Collapse id="basic-navbar-nav">
-        //         <Nav className="topnav">
-        //             <img href="/home" className="header-img" alt="myimage" src="/sspic4.png" width={170} height={120}></img>
-        //             <Nav.Link to="/home" activeStyle>HOME</Nav.Link>
-        //             <Nav.Link to="/about" activeStyle>ABOUT US</Nav.Link>
-        //             <Nav.Link to="/sermons" activeStyle>SERMON</Nav.Link>
-        //             <Nav.Link to="/events" activeStyle>EVENTS</Nav.Link>
-        //             <Nav.Link href="/giving" activeStyle><button>GIVING</button></Nav.Link>
-        //         </Nav>
-        //         </Navbar.Collapse>
-        //     </Container>    
-        //  </Navbar>
     )
 }
 
