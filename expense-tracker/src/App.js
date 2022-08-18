@@ -4,6 +4,7 @@ import Revenue from './components/Revenue';
 import Expenses from './components/Expenses';
 import Header from './components/Header';
 import Remaining from './components/Remaining';
+import ListOfExpenses from './components/ListOfExpenses';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Expenses/>
         <Remaining/>  
       </div>
+      <ListOfExpenses/>
     </div>
   );
 }
