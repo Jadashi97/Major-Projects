@@ -1,20 +1,21 @@
 import React from 'react';
 // import Footer from './Footer';
-import { BrowserRouter, Routes, Route, Navigate, Link} from 'react-router-dom';
-import Events from './Events';
-import Location from './Location';
+import { Outlet, Link} from 'react-router-dom';
 
 function App() {
 
   return (
     <div>
-      <h1>South Sudanese Community Church</h1>
       {/* create links to our various pages */}
       <nav>
-        <Link to="/Home">Home</Link> | {" "}
-        <Link to="/BodyContent">About us</Link> | {" "}
-        <Link to="/Events">Events</Link> | {" "}
+        <h1>South Sudanese Community Church</h1>
+        <Link to="/home">Home</Link> | {" "}
+        <Link to="/about">About us</Link> | {" "}
+        <Link to="/events">Events</Link> | {" "}
+        <Link to="/sermons">Sermons & Teaching</Link> | {" "}
+
       </nav>
+      <Outlet/>
     
     </div>
   );    
