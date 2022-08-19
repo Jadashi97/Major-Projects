@@ -5,6 +5,7 @@ import Expenses from './components/Expenses';
 import Header from './components/Header';
 import Remaining from './components/Remaining';
 import ListOfExpenses from './components/ListOfExpenses';
+// import expenseItems from './expenseItems';
 
 function App() {
   return (

@@ -33,3 +33,7 @@ header h1{
 .budget{
   display:flex;
 }
+
+.created-items{
+  display: flexbox;
+}
