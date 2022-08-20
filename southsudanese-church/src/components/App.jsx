@@ -7,13 +7,19 @@ function App() {
   return (
     <div>
       {/* create links to our various pages */}
-      <nav>
-        <h1>South Sudanese Community Church</h1>
-        <Link to="/home">Home</Link> | {" "}
-        <Link to="/about">About us</Link> | {" "}
-        <Link to="/events">Events</Link> | {" "}
-        <Link to="/sermons">Sermons & Teaching</Link> | {" "}
+      <nav >
+        <div className='header'>
+          <h4>SouthSudanese Community Church</h4>
+          <img href="#events" className="space-pics" alt="myimage" src="./ss6.jpg" width={100} height={70}></img>
+          <div className='links'>
+            <Link to="/home">Home</Link> | {" "}
+            <Link to="/about">About us</Link> | {" "}
+            <Link to="/events">Events</Link> | {" "}
+            <Link to="/sermons">Sermons & Teaching</Link> | {" "}
+            <Link to="/giving"><button>GIVE</button></Link> | {" "}
 
+          </div>
+        </div>
       </nav>
       <Outlet/>
     

@@ -10,7 +10,7 @@ function About() {
   return (
     <div>
       <h4>About us!!</h4>
-      <p>This is where the main page and links is going to be</p>
+      <p>This is where the story of we the south sudanese people will be!!</p>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Events from './components/Events';
 import Sermons from './components/Sermons';
-
+import Giving from './components/Giving';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +17,8 @@ root.render(
                 <Route path="About" element={<About/>}/>
                 <Route path="Events" element={<Events/>}/>
                 <Route path="Sermons" element={<Sermons/>}/>
+                <Route path="Giving" element={<Giving/>}/>
+
             </Route>
         </Routes>
     </BrowserRouter>
