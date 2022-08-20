@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateItem(props){
+function ExpenseItems(props){
     return(
         <div className="created-items">
             <li>
@@ -17,4 +17,4 @@ function CreateItem(props){
 }
 
 
-export default CreateItem;
+export default ExpenseItems;

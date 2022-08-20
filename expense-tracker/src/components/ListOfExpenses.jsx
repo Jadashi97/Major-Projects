@@ -1,21 +1,21 @@
 import React from "react";
 import expenseItems from "../expenseItems";
-import CreateItem from "./CreateItem";
+import ExpenseItems from "./ExpenseItems";
 // import CreateItem from "./CreateItem";
 
 function ListOfExpenses(){
     return(
-        <div>
+        <div className="expenses">
             <p>Expense List</p>
             {expenseItems.map((item)=>{
                 return(
-                    <ul>
-                        <CreateItem 
+                    <div>
+                        <ExpenseItems 
                             id={item.id}
                             name={item.name}
                             cost={item.cost}
                         />
-                    </ul>
+                    </div>
                 )
             })}
         </div>
