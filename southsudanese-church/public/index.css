@@ -99,6 +99,7 @@ footer p {
 
 .space-pics{
   padding: 0.5rem;
+  width: fit-content;
 }
 
 .img{
@@ -107,5 +108,9 @@ footer p {
 }
 
 h2{
+  text-align: center;
+}
+
+.about-us{
   text-align: center;
 }

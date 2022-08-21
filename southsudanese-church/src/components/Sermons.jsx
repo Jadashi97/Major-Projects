@@ -2,7 +2,11 @@ import React from "react";
 
 function Sermons(){
     return(
-        <h1>Todays Reading and Teachings</h1>
+        <div>
+            <h1>Todays Reading and Teachings</h1>
+            <p>this where the readings and sermons of the day are going to be!!!</p>
+        </div>
+        
     )
 }
 
