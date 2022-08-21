@@ -26,12 +26,13 @@ function CreateArea(props){
     // set function to handle the submit when the cost is created
 
     function submitExpense(event){
+        console.log("click me!")
+
         event.preventDefault(); //this will prevent the default behaviour of the submit form
 
         props.onAdd(expense); //this will pass the new contact thru the props created in the app.jsx
 
         setExpense({
-            
             name: "",
             cost: ""
 
@@ -44,10 +45,10 @@ function CreateArea(props){
             <h3>Add Expense</h3>
             <form>
                 <label htmlFor="name">Name</label>
-                <input name="name" onChange={HandleChange} value={expense.name} type="text" placeholder="Item"  /> {"  "}
+                <input name="name" onChange={HandleChange} value={expense.name} placeholder="Item"  /> {"  "}
                 
                 <label htmlFor="cost">Cost</label>
-                <input name="cost" onChange={HandleChange} value={expense.cost} type="text" placeholder="cost"  /> {"  "}
+                <input name="cost" onChange={HandleChange} value={expense.cost} placeholder="cost"  /> {"  "}
                 <button onClick={submitExpense}>Create</button>
             </form>
         </div>
