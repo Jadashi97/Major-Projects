@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-function CreateArea(){
+function CreateArea(props){
 
     const [expense, setExpense]  = useState({
-        name: " ",
-        cost: " "
+        name:" ",
+        cost:" "
     });
 
     //handling the form change
@@ -14,23 +14,38 @@ function CreateArea(){
         const {name, value} = event.target; //destructuring the name and the value;
 
         //setting up a function with a spread operator
-
         setExpense((prevExpense) => {
             return{
                 ...prevExpense,
-                [name]: value
-            }
+                [name] : value
+            };
+            // console.log("clicked")
+        });
+    }
+
+    // set function to handle the submit when the cost is created
+
+    function submitExpense(event){
+        event.preventDefault(); //this will prevent the default behaviour of the submit form
+
+        // props.onAdd(expense); //this will pass the new contact thru the props created in the app.jsx
+
+        setExpense({
+            
+            name: " ",
+            cost: " "
 
         })
+
     }
 
     return(
         <div>
-            <p>Add Expense</p>
+            <h3>Add Expense</h3>
             <form action="">
-                <input name="item"  value={expense.name} type="text" placeholder="Item"  /> {"  "}
-                <input name="cost"  value={expense.cost} type="number" placeholder="cost"  /> {"  "}
-                <button>Create</button>
+                <input name="item" onChange={HandleChange} value={expense.name} type="text" placeholder="Item"  /> {"  "}
+                <input name="cost" onChange={HandleChange} value={expense.cost} type="text" placeholder="cost"  /> {"  "}
+                <button onClick={submitExpense}>Create</button>
             </form>
         </div>
     )

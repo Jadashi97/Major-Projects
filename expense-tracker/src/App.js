@@ -6,19 +6,33 @@ import Header from './components/Header';
 import Remaining from './components/Remaining';
 import ListOfExpenses from './components/ListOfExpenses';
 import CreateArea from './components/CreateArea';
+// import { useState } from 'react';
 
 function App() {
+   
+  // const [expense, setExpense] = useState
+
+  // function addExpense(newExpense){
+
+  //   setExpense((previousExpense)=>{
+  //     return [...previousExpense, newExpense]
+  //   });
+
+  // }
+
   return (
     <div>
       <Header/>
       <div className='budget'>
         <Revenue/>
         <Expenses/>
-        <Remaining/>  
+        <Remaining/>
       </div>
-      <ListOfExpenses/>
-      <br/>
-      <CreateArea/>
+      <div className='list'>
+        <ListOfExpenses/>
+        <br/>
+        <CreateArea/>
+      </div>
     </div>
   );
 }
