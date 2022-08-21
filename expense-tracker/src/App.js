@@ -6,19 +6,19 @@ import Header from './components/Header';
 import Remaining from './components/Remaining';
 import ListOfExpenses from './components/ListOfExpenses';
 import CreateArea from './components/CreateArea';
-// import { useState } from 'react';
+import { useState } from 'react';
 
 function App() {
    
-  // const [expense, setExpense] = useState
+  const [cost, setCost] = useState([])
 
-  // function addExpense(newExpense){
+  function addCost(newExpense){
 
-  //   setExpense((previousExpense)=>{
-  //     return [...previousExpense, newExpense]
-  //   });
+    setCost((previousExpense)=>{
+      return [...previousExpense, newExpense]
+    });
 
-  // }
+  }
 
   return (
     <div>
@@ -31,7 +31,7 @@ function App() {
       <div className='list'>
         <ListOfExpenses/>
         <br/>
-        <CreateArea/>
+        <CreateArea onAdd={addCost}/>
       </div>
     </div>
   );

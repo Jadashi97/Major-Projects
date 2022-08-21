@@ -3,8 +3,8 @@ import React, { useState } from "react";
 function CreateArea(props){
 
     const [expense, setExpense]  = useState({
-        name:" ",
-        cost:" "
+        name: " ",
+        cost: " "
     });
 
     //handling the form change
@@ -28,12 +28,12 @@ function CreateArea(props){
     function submitExpense(event){
         event.preventDefault(); //this will prevent the default behaviour of the submit form
 
-        // props.onAdd(expense); //this will pass the new contact thru the props created in the app.jsx
+        props.onAdd(expense); //this will pass the new contact thru the props created in the app.jsx
 
         setExpense({
             
-            name: " ",
-            cost: " "
+            name: "",
+            cost: ""
 
         })
 
@@ -42,8 +42,11 @@ function CreateArea(props){
     return(
         <div>
             <h3>Add Expense</h3>
-            <form action="">
-                <input name="item" onChange={HandleChange} value={expense.name} type="text" placeholder="Item"  /> {"  "}
+            <form>
+                <label htmlFor="name">Name</label>
+                <input name="name" onChange={HandleChange} value={expense.name} type="text" placeholder="Item"  /> {"  "}
+                
+                <label htmlFor="cost">Cost</label>
                 <input name="cost" onChange={HandleChange} value={expense.cost} type="text" placeholder="cost"  /> {"  "}
                 <button onClick={submitExpense}>Create</button>
             </form>
