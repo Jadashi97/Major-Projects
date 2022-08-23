@@ -4,8 +4,10 @@ import Revenue from './components/Revenue';
 import Expenses from './components/Expenses';
 import Header from './components/Header';
 import Remaining from './components/Remaining';
-import ListOfExpenses from './components/ListOfExpenses';
+import expenseList from './expenseList';
+// import ListOfExpenses from './components/ListOfExpenses';
 import CreateArea from './components/CreateArea';
+import ExpenseItems from './components/ExpenseItems';
 import { useState } from 'react';
 
 function App() {
@@ -29,7 +31,19 @@ function App() {
         <Remaining/>
       </div>
       <div className='list'>
-        <ListOfExpenses/>
+        {/* <ListOfExpenses/> */}
+        {cost.map((item, index)=>{
+                return(
+                    <div>
+                        <ExpenseItems 
+                            key={index}
+                            id={index}
+                            name={item.name}
+                            cost={item.cost}
+                        />
+                    </div>
+                )
+            })}
         <br/>
         <CreateArea onAdd={addCost}/>
       </div>

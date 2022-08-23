@@ -15,11 +15,14 @@ function CreateArea(props){
 
         //setting up a function with a spread operator
         setExpense((prevExpense) => {
+            console.log("clicked");
+
             return{
                 ...prevExpense,
-                [name] : value
-            };
-            // console.log("clicked")
+                [name]: value
+            }
+                
+            
         });
     }
 
@@ -33,9 +36,8 @@ function CreateArea(props){
         props.onAdd(expense); //this will pass the new contact thru the props created in the app.jsx
 
         setExpense({
-            name: "",
-            cost: ""
-
+            name: " ",
+            cost: " "
         })
 
     }
@@ -45,10 +47,20 @@ function CreateArea(props){
             <h3>Add Expense</h3>
             <form>
                 <label htmlFor="name">Name</label>
-                <input name="name" onChange={HandleChange} value={expense.name} placeholder="Item"  /> {"  "}
+                <input 
+                    name="name" 
+                    onChange={HandleChange} 
+                    value={expense.name} 
+                    placeholder="Item"  
+                /> {"  "}
                 
                 <label htmlFor="cost">Cost</label>
-                <input name="cost" onChange={HandleChange} value={expense.cost} placeholder="cost"  /> {"  "}
+                <input 
+                    name="cost" 
+                    onChange={HandleChange} 
+                    value={expense.cost} 
+                    placeholder="cost"  
+                /> {"  "}
                 <button onClick={submitExpense}>Create</button>
             </form>
         </div>
