@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function CreateArea(props){
 
@@ -15,13 +17,12 @@ function CreateArea(props){
 
         //setting up a function with a spread operator
         setExpense((prevExpense) => {
-            console.log("clicked");
+            // console.log("clicked");
 
             return{
                 ...prevExpense,
                 [name]: value
             }
-                
             
         });
     }
@@ -29,7 +30,7 @@ function CreateArea(props){
     // set function to handle the submit when the cost is created
 
     function submitExpense(event){
-        console.log("click me!")
+        // console.log("click me!")
 
         event.preventDefault(); //this will prevent the default behaviour of the submit form
 
@@ -45,7 +46,7 @@ function CreateArea(props){
     return(
         <div>
             <h3>Add Expense</h3>
-            <form>
+            <form className="alert alert-success">
                 <label htmlFor="name">Name</label>
                 <input 
                     name="name" 

@@ -24,6 +24,8 @@ header h1{
 }
 
 .alert{
+  /* display: flex; */
+  align-items: center;
   width: 250px;
   margin-top: 2rem;
   margin-left: 15%;

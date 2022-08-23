@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function ExpenseItems(props){
 
@@ -10,14 +11,14 @@ function ExpenseItems(props){
 
 
     return(
-        <div className="created-items">
+        <div className="alert alert-danger">
             <li>
                 {props.name}
                 <div>
                     <span>
                         ${props.cost}
                     </span>
-                    <button onClick={handleClick}>X</button>
+                    <button onClick={handleClick}>x</button>
                 </div>
             </li>
         </div>
