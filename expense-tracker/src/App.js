@@ -4,10 +4,21 @@ import Revenue from './components/Revenue';
 import Expenses from './components/Expenses';
 import Header from './components/Header';
 import Remaining from './components/Remaining';
-// import expenseList from './expenseList';
+import dummyList from './dummyList';
 import CreateArea from './components/CreateArea';
 import ExpenseItems from './components/ExpenseItems';
 import { useState } from 'react';
+
+
+function Entry(item){
+  return(
+    <ExpenseItems 
+        key={item.id}
+        name={item.name}
+        cost={item.cost}
+    />
+  )
+}
 
 function App() {
    
@@ -34,44 +45,9 @@ function App() {
     })
   }
 
-  // function dummyList(props){
-  //   return(
-  //     <div>
-  //       {props.name}
-  //       {props.cost}
-  //     </div>
-  //   )
-  // }
-
   return (
-    <div>
+    <div className='budget'>
       <Header/>
-      <div className='budget'>
-        <Revenue/>
-        <Expenses/>
-        <Remaining/>
-
-        {/* solve READ */}
-        {/* <div>
-              {expenseList.map((item)=>{
-                return(
-                  <div>
-                        <dummyList 
-                            // Key={index}
-                            // id={index}
-                            name={item.name}
-                            cost={item.cost}
-                            onDelete={deleteCost}
-                        />
-                  </div>
-
-                )
-              })
-             }
-        </div> */}
-        
-      </div>
-
       <div className='list'>
         <CreateArea onAdd={addCost}/>
         {cost.map((item, index)=>{
@@ -88,6 +64,16 @@ function App() {
                 )
             })}
         <br/>
+      </div>
+      <div >
+        <Revenue/>
+        <Expenses/>
+        <Remaining/>
+        <>
+        {dummyList.map(Entry)}
+        </>
+        
+        
       </div>
     </div>
   );
