@@ -10,9 +10,12 @@ function ExpenseItems(props){
     }
 
 
+
     return(
         <div className="alert alert-danger">
             <li>
+                {/* solve the unique key bug */}
+                {props.id} 
                 {props.name}
                 <div>
                     <span>

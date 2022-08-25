@@ -24,6 +24,10 @@ function App() {
    
   const [cost, setCost] = useState([]);
 
+
+  const [isEditing, setIsEditing] = useState(false);
+  const [currentCost, setCurrentCost] = useState({});
+
   function addCost(newExpense){
 
     setCost((previousExpense)=>{
@@ -45,11 +49,28 @@ function App() {
     })
   }
 
+  // SOLVE THE EDIT BUTTON
+  function handleEditInput(e){
+    
+    setCurrentCost({
+      ...currentCost, text: e.target.value
+    })
+
+    console.log(currentCost)
+  }
+
   return (
     <div className='budget'>
       <Header/>
+      <div >
+        <Revenue/>
+        <Expenses/>
+        <Remaining/>
+        <>
+        {dummyList.map(Entry)}
+        </>
+      </div>
       <div className='list'>
-        <CreateArea onAdd={addCost}/>
         {cost.map((item, index)=>{
                 return(
                     <div>
@@ -62,18 +83,9 @@ function App() {
                         />
                     </div>
                 )
-            })}
+        })}
+        <CreateArea onAdd={addCost}/>
         <br/>
-      </div>
-      <div >
-        <Revenue/>
-        <Expenses/>
-        <Remaining/>
-        <>
-        {dummyList.map(Entry)}
-        </>
-        
-        
       </div>
     </div>
   );
