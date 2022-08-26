@@ -50,6 +50,7 @@ function CreateArea(props){
                 <label htmlFor="name">Name</label>
                 <input 
                     name="name" 
+                    type= "text"
                     onChange={HandleChange} 
                     value={expense.name} 
                     placeholder="Item"  
@@ -58,6 +59,7 @@ function CreateArea(props){
                 <label htmlFor="cost">Cost</label>
                 <input 
                     name="cost" 
+                    type= "text"
                     onChange={HandleChange} 
                     value={expense.cost} 
                     placeholder="cost"  

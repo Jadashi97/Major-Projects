@@ -35,15 +35,22 @@ header h1{
 .created-items{
   display: flexbox;
 }
-
+ */
 .list{
   text-align: center;
-}  */
+  display: block;
+} 
 
 .budget{
   text-align: center;
   margin: 1rem;
   box-shadow: 0 0 10px 0 rgba(246, 3, 3, 0.3);
   padding: 16px 32px;
+  /* width: 90px; */
+}
 
+
+.budget-2{
+  display: inline-flex;
+  /* width: 90px; */
 }

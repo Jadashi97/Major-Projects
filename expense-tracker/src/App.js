@@ -7,6 +7,7 @@ import Remaining from './components/Remaining';
 import dummyList from './dummyList';
 import CreateArea from './components/CreateArea';
 import ExpenseItems from './components/ExpenseItems';
+import EditForm from './components/EditForm';
 import { useState } from 'react';
 
 
@@ -50,7 +51,7 @@ function App() {
   }
 
   // SOLVE THE EDIT BUTTON
-  function handleEditInput(e){
+  function handleEditInputChange(e){
     
     setCurrentCost({
       ...currentCost, text: e.target.value
@@ -59,10 +60,29 @@ function App() {
     console.log(currentCost)
   }
 
+  //handling the edit form when submit
+
+  function handleEditFormSubmit(e){
+    e.preventDefault();
+
+    handleUpdateCost(currentCost.id, currentCost)
+  }
+
+  //handle for cost update
+
+  function handleUpdateCost(id, updatedCost){
+
+    const updatedItem = cost.map((cost) => {
+      return cost.id === id ? updatedCost : cost;
+    });
+    setIsEditing(false);
+    setCost(updatedItem);
+  }
+
   return (
     <div className='budget'>
       <Header/>
-      <div >
+      <div className='budget-2' >
         <Revenue/>
         <Expenses/>
         <Remaining/>
@@ -71,6 +91,16 @@ function App() {
         </>
       </div>
       <div className='list'>
+        {isEditing ? (
+          <EditForm
+            currentCost={currentCost}
+            setIsEditing={setIsEditing}
+            onEditInputChange={handleEditInputChange}
+            onEditFormSubmit={handleEditFormSubmit}
+          />
+        ) : (
+          <CreateArea onAdd={addCost}/>
+        )}
         {cost.map((item, index)=>{
                 return(
                     <div>
@@ -84,7 +114,6 @@ function App() {
                     </div>
                 )
         })}
-        <CreateArea onAdd={addCost}/>
         <br/>
       </div>
     </div>
