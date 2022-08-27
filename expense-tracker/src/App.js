@@ -79,6 +79,12 @@ function App() {
     setCost(updatedItem);
   }
 
+  function handleUpdateClick(){
+    setIsEditing(true);
+
+    setCurrentCost({...cost})
+  }
+
   return (
     <div className='budget'>
       <Header/>
@@ -101,6 +107,7 @@ function App() {
         ) : (
           <CreateArea onAdd={addCost}/>
         )}
+        <br/>
         {cost.map((item, index)=>{
                 return(
                     <div>
@@ -110,11 +117,11 @@ function App() {
                             name={item.name}
                             cost={item.cost}
                             onDelete={deleteCost}
+                            onEditClick={handleUpdateClick}
                         />
                     </div>
                 )
         })}
-        <br/>
       </div>
     </div>
   );

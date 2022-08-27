@@ -9,6 +9,17 @@ function ExpenseItems(props){
         props.onDelete(props.id)
     }
 
+    function handleUpdateClick(event){
+
+        console.log("clicked");
+        
+        event.preventDefault();
+
+        props.onClickUpdate(props.id)
+      }
+    
+
+
 
 
     return(
@@ -21,7 +32,8 @@ function ExpenseItems(props){
                     <span>
                         ${props.cost}
                     </span>
-                    <button onClick={handleClick}>x</button>
+                    <button onClick={handleClick}>delete</button>
+                    <button onClick={handleUpdateClick}>Update</button>
                 </div>
             </li>
         </div>
