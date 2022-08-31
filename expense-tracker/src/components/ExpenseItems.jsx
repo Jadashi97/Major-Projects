@@ -25,12 +25,10 @@ function ExpenseItems(props){
         <div className="alert alert-danger">
             <li>
                 {/* solve the unique key bug */}
-                {props.id} 
+                {/* {props.id}  */}
                 {props.name}
+                ${props.cost}
                 <div>
-                    <span>
-                        ${props.cost}
-                    </span>
                     <button onClick={handleClick}>delete</button>
                     <button onClick={handleUpdateClick}>Update</button>
                 </div>

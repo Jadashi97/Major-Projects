@@ -50,6 +50,12 @@ function App() {
     })
   }
 
+  // set up onChange handler for the edit button
+  function handleEditInputChange(e){
+    setCurrentCost({...currentCost, text: e.target.value });
+    console.log(currentCost);
+  }
+
   return (
     <div className='budget'>
       <Header/>
@@ -66,7 +72,7 @@ function App() {
           <EditForm
             currentCost={currentCost}
             setIsEditing={setIsEditing}
-            // onEditInputChange={handleEditInputChange}
+            onEditInputChange={handleEditInputChange}
             // onEditFormSubmit={handleEditFormSubmit}
           />
         ) : (
