@@ -10,13 +10,12 @@ function ExpenseItems(props){
     }
 
     function handleUpdateClick(event){
+        event.preventDefault();
 
         console.log("clicked");
         
-        event.preventDefault();
-
         props.onClickUpdate(props.id)
-      }
+    }
     
 
 

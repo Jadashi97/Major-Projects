@@ -50,41 +50,6 @@ function App() {
     })
   }
 
-  // SOLVE THE EDIT BUTTON
-  function handleEditInputChange(e){
-    
-    setCurrentCost({
-      ...currentCost, text: e.target.value
-    })
-
-    console.log(currentCost)
-  }
-
-  //handling the edit form when submit
-
-  function handleEditFormSubmit(e){
-    e.preventDefault();
-
-    handleUpdateCost(currentCost.id, currentCost)
-  }
-
-  //handle for cost update
-
-  function handleUpdateCost(id, updatedCost){
-
-    const updatedItem = cost.map((cost) => {
-      return cost.id === id ? updatedCost : cost;
-    });
-    setIsEditing(false);
-    setCost(updatedItem);
-  }
-
-  function handleUpdateClick(){
-    setIsEditing(true);
-
-    setCurrentCost({...cost})
-  }
-
   return (
     <div className='budget'>
       <Header/>
@@ -101,8 +66,8 @@ function App() {
           <EditForm
             currentCost={currentCost}
             setIsEditing={setIsEditing}
-            onEditInputChange={handleEditInputChange}
-            onEditFormSubmit={handleEditFormSubmit}
+            // onEditInputChange={handleEditInputChange}
+            // onEditFormSubmit={handleEditFormSubmit}
           />
         ) : (
           <CreateArea onAdd={addCost}/>
@@ -117,7 +82,7 @@ function App() {
                             name={item.name}
                             cost={item.cost}
                             onDelete={deleteCost}
-                            onEditClick={handleUpdateClick}
+                            // onEditClick={handleUpdateClick}
                         />
                     </div>
                 )
