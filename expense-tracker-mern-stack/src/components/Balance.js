@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export function Balance(){
+export default function Balance(){
     return(
         <>
             <h4>My Balance</h4>
