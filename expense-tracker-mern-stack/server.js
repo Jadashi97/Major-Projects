@@ -3,16 +3,18 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const colors = require('colors');
 
-dotenv.config({ path: './config/config.env'})
+dotenv.config({ path: './config/config.env'});
+
+const transactions = require('./routes/transactions')
 
 const app = express();
 
 
-app.get('/', (req, res)=>{
-    res.send("Ya Dunia! Mashallah!")
-})
+// app.get('/', (req, res)=> res.send("Ya Dunia! Mashallah!"));
 
-const PORT = process.env.PORT || 5000;
+app.use('/api/v1/transactions', transactions);
+
+const PORT = process.env.PORT || 3000;
 
 
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on ${PORT}`.yellow.bold)
