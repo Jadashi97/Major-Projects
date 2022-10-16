@@ -12,6 +12,8 @@ const transactions = require('./routes/transactions')
 
 const app = express();
 
+app.use(express.json()); //this allows us to use body parser
+
 
 // app.get('/', (req, res)=> res.send("Ya Dunia! Mashallah!"));
 
