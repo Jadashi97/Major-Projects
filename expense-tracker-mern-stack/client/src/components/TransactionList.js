@@ -9,10 +9,10 @@ export default function TransactionList() {
   const {transactions, getTransactions} = useContext(GlobalContext) //destructure transaction & getTransactions from the Global context
 
   useEffect(()=>{
-    getTransactions();
+    getTransactions(); //we call this from the GlobalState.js
 
     // the line below prevents react from throwing an error---- try deleting next line to see the error
-    
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
