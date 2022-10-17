@@ -1,4 +1,5 @@
 import React, {useContext} from "react";
+import numberWithCommas from "../utils/format"; // this is from utils folder with way to add commas in nums
 
 import { GlobalContext } from '../context/GlobalState';
 
@@ -12,7 +13,7 @@ export default function Balance(){
     return(
         <>
             <h4>My Balance</h4>
-            <h1>{total}</h1>
+            <h1>${numberWithCommas(total)}</h1>
         </>
     )
 }

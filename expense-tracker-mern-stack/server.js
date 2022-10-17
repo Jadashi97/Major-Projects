@@ -1,3 +1,4 @@
+const path = require('path'); //this hepls manipulate path names in production
 const express = require('express');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
@@ -18,7 +19,15 @@ if(process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'));
 }
 
-app.use('/api/v1/transactions', transactions);
+app.use('/api/v1/transactions', transactions); //this sets up our api routes
+
+
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build')); //sets the static folder
+
+    //below loads up when in production mode and when we have any other routes to load up aside from the api route
+    app.get('*', (req, res)=> res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')));
+}
 
 const PORT = process.env.PORT || 4000;
 
