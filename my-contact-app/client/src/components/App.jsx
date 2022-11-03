@@ -28,7 +28,7 @@ function App(){
       }
 
       //add edit btn to update the contact
-
+      /////////////////////////////////// FIX EDIT BUTTON /////////////////////
       function editContact(id, newContact){
         console.log("update me")
         const editContactList = contacts.map((contacts)=>{
