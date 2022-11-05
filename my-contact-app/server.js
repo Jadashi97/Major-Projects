@@ -1,10 +1,12 @@
 const express = require('express');
 const colors = require('colors');
 const dotenv = require('dotenv'); //this helps us create global variables for our routes
-
+const connectDB = require('./config/db'); //require db from the config file
 const contacts = require('./routes/contacts');
 
 dotenv.config({ path: './config/config.env'}); //this allows access of the created path on configs
+
+connectDB();
 
 const app = express();
 

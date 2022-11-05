@@ -6,13 +6,13 @@ const ContactSchema = new mongoose.Schema({
         trim: true,
         required: [true, 'Please add your first name']
     },
-    lName: {
+    userName: {
         type: String,
         trim: true,
         required: [true, 'Please add your last name']
     },
     birthDate: {
-        type: Number,
+        type: String,
         required: [true, 'Please add your birth Date']
     },
     phone: {
