@@ -40,7 +40,7 @@ class App extends Component {
             <div className='container border border-secondary rounded center'>
                 <div className='row'>
                     <div className='col-12'>
-                    <h4>Pending Invoices - The Test Company</h4>
+                    <h4 className='text-center'>Pending Invoices - The Test Company</h4>
                     </div>
                 </div>
 
